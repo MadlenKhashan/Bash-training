@@ -1,3 +1,6 @@
+#! /bin/bash
+function zevel()
+{
 echo "enter your first number: "
 read number1
 echo "enter your second number: "
@@ -12,3 +15,5 @@ else
 	echo "the numbers are equals"
 
 fi
+}
+zevel
