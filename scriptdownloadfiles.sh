@@ -1,3 +1,22 @@
 #! /bin/bash
-url=https://cdn.britannica.com/84/232784-004-D70DC183/Siberian-Husky-dog.jpg
-curl ${url} -O
+mkdir  madlenfolder
+echo "enter folder name-"
+read folder
+if [ -d "$folder" ]
+then
+    echo "the $folder exists"
+else
+    echo "the $folder doesn't exists. would you like to creat it?"
+    select i in y n; do
+        case $i in
+            y)
+                mkdir "$folder"
+                break
+                ;;
+            n)
+                echo "you choose no exiting"
+                break
+                ;;
+                esac
+    done
+fi
